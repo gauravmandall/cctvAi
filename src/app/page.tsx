@@ -2,9 +2,11 @@
 import { ModeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { FlipHorizontal } from 'lucide-react';
-import React, { useRef } from 'react'
+import { Camera, FlipHorizontal, PersonStanding, Video } from 'lucide-react';
+import React, { useRef, useState } from 'react'
+import { Rings } from 'react-loader-spinner';
 import Webcam from 'react-webcam';
+import { toast } from 'sonner';
 
 type Props = {}
 
@@ -14,6 +16,9 @@ const HomePage = (props: Props) => {
 
   // state 
   const [mirrored, setMirrored] = React.useState<boolean>(false);
+  const [isRecording, setIsRecording] = React.useState<boolean>(false);
+  const [autoRecordEnabled, setAutoRecordEnabled] = useState<boolean>(false);
+
   return (
     <div className='flex h-screen'>
       {/* Left division - webcam and Canvas */}
@@ -40,23 +45,49 @@ const HomePage = (props: Props) => {
           {/* Top section */}
           <div className='flex flex-col gap-2'>
             <ModeToggle />
-            <Button 
-            onClick={() => {
-              setMirrored((prev)=>!prev);
-            }}
-            variant={'outline'} 
-            size={'icon'}
+            <Button
+              onClick={() => {
+                setMirrored((prev) => !prev);
+              }}
+              variant={'outline'}
+              size={'icon'}
             >
               <FlipHorizontal />
             </Button>
-            <Separator  className='my-2'/>
+            <Separator className='my-2' />
           </div>
 
           {/* Middle section */}
           <div className='flex flex-col gap-2'>
-            <Separator />
+            <Separator className='my-2' />
+            <Button
+              variant={'outline'}
+              size={'icon'}
+              onClick={userPromptScreenshot}
+            >
+              <Camera />
+            </Button>
 
-            <Separator />
+            <Button
+              variant={isRecording ? 'destructive' : 'outline'}
+              size={'icon'}
+              onClick={userPromptRecord}
+            >
+              <Video />
+            </Button>
+
+
+            <Separator className='my-2' />
+
+            <Button
+              variant={autoRecordEnabled ? 'destructive' : 'outline'}
+              size={'icon'}
+              onClick={toggleAutoRecord}
+            >
+              {autoRecordEnabled ? <Rings color='white' height={40} /> : <PersonStanding />}
+
+            </Button>
+
           </div>
           {/* Bottom section */}
           <div className='flex flex-col gap-2'>
@@ -69,6 +100,39 @@ const HomePage = (props: Props) => {
       </div>
     </div>
   )
+
+  // handler functions
+  function userPromptScreenshot() {
+    // take picture
+
+    // save it to the downloads
+  }
+
+  function userPromptRecord() {
+
+    // check if recording
+    // then stop recording
+    // and save it to downloads
+
+    // if not recording
+    // then start recording
+  }
+
+  function toggleAutoRecord() {
+    // check if auto recording
+    if (autoRecordEnabled) {
+      setAutoRecordEnabled(false);
+      toast("Auto record disabled");
+      // show toast to user to notify the change
+    } else {
+      setAutoRecordEnabled(true);
+      toast("Auto record Enabled");
+      // show toast to user to notify the change
+    }
+
+  }
+
+
 }
 
 export default HomePage
