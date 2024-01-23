@@ -1,6 +1,8 @@
 "use client";
 import { ModeToggle } from '@/components/theme-toggle';
+import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { FlipHorizontal } from 'lucide-react';
 import React, { useRef } from 'react'
 import Webcam from 'react-webcam';
 
@@ -38,7 +40,16 @@ const HomePage = (props: Props) => {
           {/* Top section */}
           <div className='flex flex-col gap-2'>
             <ModeToggle />
-            <Separator />
+            <Button 
+            onClick={() => {
+              setMirrored((prev)=>!prev);
+            }}
+            variant={'outline'} 
+            size={'icon'}
+            >
+              <FlipHorizontal />
+            </Button>
+            <Separator  className='my-2'/>
           </div>
 
           {/* Middle section */}
