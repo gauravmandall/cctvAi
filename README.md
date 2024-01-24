@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CCTVAI that detects humans using Next.js, Typescript, Tensorflow.js, shadcn UI components and Tailwind CSS.
 
-## Getting Started
 
-First, run the development server:
+### Key Features:
+- 🌅 Light, Dark & System theme
+- 🐬 toggle mirror mode
+- 📲 take screenshot
+- 📽️ record 30 seconds video
+- ⏺️ Auto record video when human is detected
+- 🔉 Manage volume level
+- 📱 Base64 encoded image
+- 🧑‍🤝‍🧑 Multi-device responsive
+- 🧠 AI to detect humans
 
-```bash
+
+
+*Access the webApp here: [https://cctvai.vercel.app/](https://cctvai.vercel.app/)* or **build your own by following the steps below.**
+
+### Prerequisite
+
+- **Knowledge of basic understanding of Tensorflow**
+
+
+
+### First fork the repository
+![fork](./public/fork.png)
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/gauravmandall/cctvAi.git
+```
+
+### Install packages
+
+```shell
+npm i
+# or
+yarn install
+# or
+pnpm install
+```
+
+
+### Start the app
+
+```shell
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Woila! You are done 🎉 give a star ⭐ if you like it.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are always welcome!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+See `contributing.md` for ways to get started.
 
-## Deploy on Vercel
+Please adhere to this project's `code of conduct`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+
+- [@gauravmandall](https://www.github.com/gauravmandall) ([portfolio](https://www.gauravmandall.vercel.app))
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at contact.gauravmandall@gmail.com
+
+
+## Support
+
+Give a Star ⭐ to support my projects.
+
+## License
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+```
+MIT License
+
+Copyright (c) 2024 Gaurav Mandal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
