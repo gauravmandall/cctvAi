@@ -16,6 +16,13 @@
 
 *Access the webApp here: [https://cctvai.vercel.app/](https://cctvai.vercel.app/)* or **build your own by following the steps below.**
 
+
+## Hierarchical Structure
+
+![architecture](./public/structure.png)
+
+
+
 ### Prerequisite
 
 - **Knowledge of basic understanding of Tensorflow**
